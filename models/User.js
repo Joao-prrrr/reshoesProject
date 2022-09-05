@@ -3,5 +3,7 @@ let User = function(data) {
 }
 
 User.prototype.login = function() {
-    
+
 }
+
+module.exports = User
