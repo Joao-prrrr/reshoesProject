@@ -14,7 +14,7 @@ Install ejs
 
 Install nodemon
 > npm install nodemon
-> Go to package.json in "scripts" add "watch": "nodemon app",
+Go to package.json in "scripts" add "watch": "nodemon app",
 
 Install MongoDB
 > npm install mongodb
