@@ -2,6 +2,8 @@
 /// Author : Joao Araribá, Louis Saulnier and Bastien Schneider
 /// Date : 05.09.2022 v1
 
+const MongoStore = require('connect-mongo')
+
 const express = require('express')
 const app = express()
 
