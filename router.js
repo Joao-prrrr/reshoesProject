@@ -4,5 +4,6 @@ const router = express.Router()
 const userController = require('./controllers/userController')
 
 router.get('/', userController.home)
+router.get('/page-jordan')
 
 module.exports = router
