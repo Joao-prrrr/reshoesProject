@@ -22,3 +22,7 @@ main>ul>li>ul>li{
     display: flex;
     flex-direction: column;
 }
+
+img{
+    width: 4.2vw;
+}
