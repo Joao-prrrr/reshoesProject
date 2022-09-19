@@ -2,15 +2,17 @@ html *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
     height: 100vh;
-    width: 99vw;
+    width: 99.5vw;
     margin: 0;
     padding: 0;
 }
 
+<<<<<<< HEAD
 header {
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +28,10 @@ h1, header > a {
     font-size: 1.5em;
     margin: 5px;
     
+=======
+h1, h2{
+    margin: 1%;
+>>>>>>> 3990b0db83162969b647602465ae8bbe2568838c
 }
 
 header>h1>a {
@@ -40,11 +46,17 @@ header nav{
     width: 85%;
     align-self: center;
     justify-self: center;
+<<<<<<< HEAD
     /* margin: auto; */
+=======
+    margin: auto;
+    font-weight: bolder;
+>>>>>>> 3990b0db83162969b647602465ae8bbe2568838c
 }
 
 header nav ul li{
     list-style: none;
+    padding-bottom: 3%;
 }
 
 header nav a{
@@ -68,6 +80,7 @@ main>ul{
 main>ul>li{
     display: flex;
     flex-direction: column;
+    margin: 1%;
 }
 
 main>ul>li>ul{
@@ -75,13 +88,21 @@ main>ul>li>ul{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-main>ul>li>ul>li{
+main>ul>li>ul li{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    margin-top: 2%;
+    border: 2px solid #A9A9A9;
+    padding: 1%;
+    border-radius: 10px;
+    width: 10%;
+    min-height: 14vh;
+    max-height: 22vh;
 }
 
 img{
@@ -89,10 +110,21 @@ img{
     width: 4.2vw;
 }
 
-main>ul>li>ul>li>h3,
-main>ul>li>ul>li>h4,
-main>ul>li>ul>li>p {
+main>ul>li>ul li>h3,
+main>ul>li>ul li>h4{
+    font-size: 1.6rem;
+}
+
+main>ul>li>ul li>p {
+    font-size: 1.1rem;
+    color: #646464;
+}
+
+main>ul>li>ul li>h3,
+main>ul>li>ul li>h4,
+main>ul>li>ul li>p {
     text-align: left;
+    margin-top: 12%;
 }
 
     a {
@@ -107,8 +139,10 @@ main>ul>li>ul>li>p {
     padding: 0;
     margin: 0;
 }
+
 .bottomBar{
     width: 100%;
+<<<<<<< HEAD
     height: 10%;
     background-color: black;
     padding: 0;
@@ -123,4 +157,24 @@ footer {
     align-items: center;
 
     flex-wrap: wrap;
+=======
+    height: 5vh;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    margin: 1%;
+}
+
+footer {
+    margin-top: 3%;
+    font-size: 1.5rem;
+>>>>>>> 3990b0db83162969b647602465ae8bbe2568838c
 }
