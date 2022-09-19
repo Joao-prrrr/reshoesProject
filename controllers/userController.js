@@ -6,9 +6,13 @@ exports.home = function(req, res) {
 }
 
 // Called to render the ejs page
-exports.pageMarque = function(req, res) {
+exports.goToPage = function(req, res) {
     // get the path to know which page render
     let file = req.path
     file = file.slice(1)
     res.render(file, {marque: file})
+}
+
+exports.login = function(req, res) {
+
 }
