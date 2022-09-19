@@ -39,6 +39,12 @@ header nav ul li{
 
 header nav a{
     font-size: 1.5rem;
+    transition: all 0.75s;
+}
+
+header nav a:hover{
+    font-size: 1.75rem;
+    transition: all 0.75s;
 }
 
 header nav ul{
