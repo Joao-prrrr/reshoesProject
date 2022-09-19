@@ -2,7 +2,7 @@
 
 body{
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 }
 
 main>ul{
@@ -18,18 +18,29 @@ main>ul>li{
 main>ul>li>ul{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 main>ul>li>ul>li{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 img{
+    align-self: center;
     width: 4.2vw;
 }
 
-a {
+main>ul>li>ul>li>h3,
+main>ul>li>ul>li>h4,
+main>ul>li>ul>li>p {
+    text-align: left;
+}
+
+    a {
     text-decoration: none;
     color: black;
 }
