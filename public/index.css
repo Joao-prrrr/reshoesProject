@@ -12,7 +12,6 @@ body{
     padding: 0;
 }
 
-<<<<<<< HEAD
 header {
     display: flex;
     flex-wrap: wrap;
@@ -28,10 +27,8 @@ h1, header > a {
     font-size: 1.5em;
     margin: 5px;
     
-=======
 h1, h2{
     margin: 1%;
->>>>>>> 3990b0db83162969b647602465ae8bbe2568838c
 }
 
 header>h1>a {
@@ -46,12 +43,9 @@ header nav{
     width: 85%;
     align-self: center;
     justify-self: center;
-<<<<<<< HEAD
     /* margin: auto; */
-=======
     margin: auto;
     font-weight: bolder;
->>>>>>> 3990b0db83162969b647602465ae8bbe2568838c
 }
 
 header nav ul li{
@@ -142,7 +136,6 @@ main>ul>li>ul li>p {
 
 .bottomBar{
     width: 100%;
-<<<<<<< HEAD
     height: 10%;
     background-color: black;
     padding: 0;
@@ -157,7 +150,6 @@ footer {
     align-items: center;
 
     flex-wrap: wrap;
-=======
     height: 5vh;
     background-color: black;
     padding: 0;
@@ -176,5 +168,4 @@ footer p{
 footer {
     margin-top: 3%;
     font-size: 1.5rem;
->>>>>>> 3990b0db83162969b647602465ae8bbe2568838c
 }
