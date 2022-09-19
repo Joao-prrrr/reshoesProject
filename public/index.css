@@ -3,6 +3,8 @@
 body{
     height: 100vh;
     width: 99vw;
+    margin: 0;
+    padding: 0;
 }
 
 main>ul{
@@ -25,7 +27,7 @@ main>ul>li>ul{
 main>ul>li>ul>li{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
 }
 
@@ -43,4 +45,12 @@ main>ul>li>ul>li>p {
     a {
     text-decoration: none;
     color: black;
+}
+
+.topBar{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    padding: 0;
+    margin: 0;
 }
