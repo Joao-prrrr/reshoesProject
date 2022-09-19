@@ -39,3 +39,8 @@ main>ul>li>ul>li>h4,
 main>ul>li>ul>li>p {
     text-align: left;
 }
+
+    a {
+    text-decoration: none;
+    color: black;
+}
