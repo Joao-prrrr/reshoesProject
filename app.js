@@ -12,7 +12,12 @@ app.use(express.static('public'))
 app.set('views', 'views')
 app.set('view engine', 'ejs')
 
-
+app.use(function(req, res , next) {
+    let file = req.path
+    file = file.slice(1)
+    res.locals.marque = file
+    next()
+})
 
 app.use('/', router)
 
