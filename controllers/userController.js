@@ -10,5 +10,5 @@ exports.pageMarque = function(req, res) {
     // get the path to know which page render
     let file = req.path
     file = file.slice(1)
-    res.render(file)
+    res.render(file, {"marque": file})
 }
