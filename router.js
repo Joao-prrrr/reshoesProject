@@ -8,14 +8,16 @@ const userController = require('./controllers/userController')
 // go to home page
 router.get('/', userController.home)
 // go to jordan page
-router.get('/page-jordan', userController.pageMarque)
+router.get('/page-jordan', userController.goToPage)
 // go to Yeezy page
-router.get('/page-yeezy', userController.pageMarque)
+router.get('/page-yeezy', userController.goToPage)
 // go to New Balance page
-router.get('/page-newBalance', userController.pageMarque)
+router.get('/page-newBalance', userController.goToPage)
 // go to Nike page
-router.get('/page-nike', userController.pageMarque)
+router.get('/page-nike', userController.goToPage)
 // go to Luxe page
-router.get('/page-luxe', userController.pageMarque)
+router.get('/page-luxe', userController.goToPage)
+//go to login page
+router.get('/login', userController.goToPage)
 
 module.exports = router
