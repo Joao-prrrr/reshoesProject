@@ -13,9 +13,15 @@ app.set('views', 'views')
 app.set('view engine', 'ejs')
 
 app.use(function(req, res , next) {
-    let file = req.path
-    file = file.slice(1)
-    res.locals.marque = file
+    if(req.path != "/") {
+        let file = req.path
+        file = file.slice(6)
+        let firstLetter = file.charAt(0).toUpperCase()
+        file = firstLetter + file.slice(1)
+        res.locals.marque = file
+    } else {
+        res.locals.marque = false
+    }
     next()
 })
 
