@@ -139,6 +139,6 @@
         </li>
     </ul>
 </main>
-
+>>>>>>> 224ad3b6e9560e013a952e11452cdfab6b002466
     <!-- Footer -->
     <%-include('includes/footer.ejs')%>
