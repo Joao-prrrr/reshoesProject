@@ -149,14 +149,12 @@ main>ul>li>ul li>p {
 }
 footer {
     width: 100%;
-    height: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     flex-wrap: wrap;
-    height: 5vh;
     background-color: black;
     padding: 0;
     margin: 0;
