@@ -3,6 +3,11 @@
 
 Intaller node.js : https://nodejs.org/en/
 
+Pour démarer le serveur local
+> npm run watch
+
+## Pas besoin de faire ---------------------------
+
 Init the Json package
 > npm init -y
 
