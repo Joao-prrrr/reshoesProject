@@ -1,3 +1,9 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 li {
     list-style: none;
     display: flex;
@@ -17,15 +23,19 @@ main {
     justify-content: center;
     align-items: center;
 
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 button {
-    margin: auto;
+    font-size: 1.5rem;
     padding: 1em 2em 1em 2em;
 
     background-color: #fff;
     border: none;
+}
+
+li:last-child{
+    flex-basis: 100%;
 }
 
 nav * {
@@ -40,6 +50,11 @@ h1 {
 form {
     background-color: rgb(95, 100, 107);
     border-radius: 20px;
+    width: 40%;
+}
+
+input {
+    padding: .5em;
 }
 
 #login {
