@@ -22,4 +22,8 @@ router.get('/page-login', userController.goToPage)
 // go to register page
 router.get('/page-register', userController.goToPage)
 
+// router's posts
+router.post('/register', userController.register)
+router.post('/login', userController.login)
+
 module.exports = router

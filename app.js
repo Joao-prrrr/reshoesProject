@@ -12,6 +12,9 @@ app.use(express.static('public'))
 app.set('views', 'views')
 app.set('view engine', 'ejs')
 
+app.use(express.json()) // for json
+app.use(express.urlencoded({ extended: true })) // for form data
+
 app.use(function(req, res , next) {
     if(req.path != "/") {
         let file = req.path
