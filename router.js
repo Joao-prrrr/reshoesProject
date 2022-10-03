@@ -18,8 +18,8 @@ router.get('/page-nike', userController.goToPage)
 // go to Luxe page
 router.get('/page-luxe', userController.goToPage)
 //go to login page
-router.get('/login', userController.goToPage)
+router.get('/page-login', userController.goToPage)
 // go to register page
-router.get('/register', userController.goToPage)
+router.get('/page-register', userController.goToPage)
 
 module.exports = router
