@@ -6,7 +6,14 @@
 const MongoStore = require('connect-mongo')
 const router= require('./router')
 const express = require('express')
+const session = require('express-session')
+const flash = require('connect-flash')
+
 const app = express()
+
+// app.use(express.cookieParser('keyboard cat'));
+// app.use(express.session({ cookie: { maxAge: 60000 }}));
+// app.use(flash());
 
 app.use(express.static('public'))
 app.set('views', 'views')
