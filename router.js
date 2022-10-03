@@ -4,6 +4,7 @@ const express = require('express')
 const router = express.Router()
 
 const userController = require('./controllers/userController')
+const shoesController = require('./controllers/shoesController')
 
 // go to home page
 router.get('/', userController.home)
@@ -21,6 +22,9 @@ router.get('/page-luxe', userController.goToPage)
 router.get('/page-login', userController.goToPage)
 // go to register page
 router.get('/page-register', userController.goToPage)
+
+// router shoes
+router.get('/jordan/:id', shoesController.getPageJordan)
 
 // router's posts
 router.post('/register', userController.register)
