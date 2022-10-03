@@ -5,6 +5,22 @@ html * {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h1,
+header nav:first-child {
+    flex-basis: 40%;
+}
+
+header nav:first-child {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav>a {
+    margin: 1em;
+}
+
 main img {
     display: flex;
     align-items: center;
