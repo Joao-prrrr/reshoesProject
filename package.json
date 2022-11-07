@@ -2,9 +2,9 @@
   "name": "reshoesproject",
   "version": "1.0.0",
   "description": "Intaller node.js : https://nodejs.org/en/",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "watch": "nodemon app",
+    "watch": "nodemon db",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,13 +19,16 @@
   },
   "homepage": "https://github.com/Joao-prrrr/reshoesProject#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
     "dotenv": "^16.0.2",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
-    "mongodb": "^4.9.1",
-    "nodemon": "^2.0.19"
+    "md5": "^2.3.0",
+    "mongodb": "^4.11.0",
+    "nodemon": "^2.0.19",
+    "validator": "^13.7.0"
   }
 }
