@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./marque.css">
-    <title>Re:shoes <%
+    <link rel="stylesheet" href="../chaussure.css">
+    <title>Re:shoes
+        <%
         if(marque){
             %>
-            <%="- " + marque %><%
+            <%="- " + marque %>
+                <%
         }
-        %></title>
+        %>
+    </title>
 </head>
+
 <body>
     <header>
         <div class="topBar"></div>
         <h1><a href="/">Re:Shoe</a></h1>
-        <a id="login" href="/login">Login</a>
+        <nav>
+            <a id="login" href="/page-login">Login</a>
+            <a id="register" href="/page-register">Enregistrer</a>
+        </nav>
         <nav>
             <ul>
                 <li><a href="/page-jordan">Jordan</a></li>
