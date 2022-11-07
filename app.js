@@ -14,13 +14,13 @@ const app = express()
 // app.use(express.cookieParser('keyboard cat'));
 // app.use(express.session({ cookie: { maxAge: 60000 }}));
 // app.use(flash());
+app.use(express.urlencoded({ extended: true })) // for form data
+app.use(express.json()) // for json
 
 app.use(express.static('public'))
 app.set('views', 'views')
 app.set('view engine', 'ejs')
 
-app.use(express.json()) // for json
-app.use(express.urlencoded({ extended: true })) // for form data
 
 app.use(function(req, res , next) {
     if(req.path != "/") {
