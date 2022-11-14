@@ -32,6 +32,9 @@ router.get('/jordan/:id', shoesController.getPageJordan)
 
 // router's posts
 router.post('/register', userController.register)
+// router.post('/register', (req, res) => {res.send(req.body)})
 router.post('/login', userController.login)
 
+// log out
+router.get('/logout', userController.logout)
 module.exports = router

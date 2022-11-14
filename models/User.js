@@ -11,41 +11,64 @@ let User = function(data) {
     // fname: "Joao"
     // lname: "Araribá"
     // email: "joaog.arariba"gmail.com"
-    // username: "12341234"
+    // password: "12341234"
+}
+
+User.prototype.cleanUp = function() {
+    if(typeof(this.data.username) != 'string') {
+        this.data.username = ''
+    } else if(typeof(this.data.email) != 'string') {
+        this.data.email = ''
+    } else if(typeof(this.data.password) != 'string') {
+        this.data.password = ''
+    }
 }
 
 User.prototype.validate = function() {
+    return new Promise(async (resolve, reject) => {
+        if(this.data.username == "") {this.errors.push("Le username ne peut pas être vite")}
+    if(this.data.username != "" && !validator.isAlphanumeric(this.data.username)){this.errors.push("Le username doit contenier seulement des lettres et des chiffres.")}
+    if(!validator.isEmail(this.data.email) && this.data.email != "") {this.errors.push("L'email n'est pas valide")}
+    if(this.data.password == "" || this.data.password.length < 12) {this.errors.push("Le password doit être long de 12 caracthères")}
 
-    if(this.data.username.length < 3){
-        this.errors.push('Le username doit être plus grand que 3 caracthères.')
-    }
-    if(typeof(this.data.username) != "string") {
-        this.errors.push('Le username doit comporter seulement des caracthères.')
-    }
-    if(this.data.password.length < 12) {
-        this.errors.push('Le mot de passe doit compoter au moins 12 caracthères')
-    }
+    // Only if username and email are valids, check if they are taken
+    if(!this.errors.length) {
+        let usernameExists = await usersCollection.findOne({username: this.data.username})
+        if(usernameExists) {this.errors.push('Ce username est déjà utilié.')}
 
+        let emailExists = await usersCollection.findOne({email: this.data.email})
+        if(emailExists) {this.errors.push('Cet email est déjà pris.')}
+    }
+    resolve()
+    })
 }
 
 User.prototype.login = function() {
     return new Promise((resolve, reject) => {
-        this.validate()
-
-        if(this.errors.length == 0){
-            resolve('congrats!!')
-        } else {
-            reject(this.errors)
-        }
+        this.cleanUp()
+        usersCollection.findOne({username: this.data.username}).then((attemptUser)=>{
+            if(attemptUser && bcrypt.compareSync(this.data.password, attemptUser.password)){
+                this.data = attemptUser
+                resolve();
+            } else {
+               reject("Mauvais username ou mot de passe")
+            }
+        }).catch(()=>{
+            reject("Erreur, essayez à nouveau plus tard.")
+        })
     })
 }
 
 User.prototype.register = function() {
-    return new Promise((resolve, reject) => {
-        this.validate()
+    return new Promise(async (resolve, reject) => {
+        this.cleanUp()
+        await this.validate()
 
         if(this.errors.length == 0){
-            resolve('congrats!!')
+            const salt = bcrypt.genSaltSync(10)
+            this.data.password = bcrypt.hashSync(this.data.password, salt)
+            await usersCollection.insertOne(this.data)
+            resolve()
         } else {
             reject(this.errors)
         }
