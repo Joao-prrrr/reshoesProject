@@ -26,7 +26,8 @@ exports.login = function(req, res) {
     let userLogin = req.body
     let user = new User(userLogin)
     user.login().then((result) => {
-        req.session.user = {username: user.data.username, _id: user.data._id}
+        req.session.user = {
+            username: user.data.username, _id: user.data._id}
         req.session.save(function() {
             res.redirect('/')
         })
@@ -59,7 +60,7 @@ exports.register = function(req, res) {
             req.flash('regErrors', err)
         })
         req.session.save(() => {
-            res.redirect('/')
+            res.redirect('/page-register')
         })
     })
 }
