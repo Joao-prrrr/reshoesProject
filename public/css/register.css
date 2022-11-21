@@ -32,6 +32,7 @@ button {
 
     background-color: #fff;
     border: none;
+    border-radius: 10px;
 }
 
 li:last-child{
@@ -59,4 +60,9 @@ input {
 
 #register {
     display: none;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+    border-radius: 10px;
+    padding: 1.5em;
+    border: black solid 2px;
 }

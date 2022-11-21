@@ -1,12 +1,13 @@
 const Shoes = require("../models/Shoes")
 
 exports.getPageJordan = function(req, res) {
-    shoesId = req.params.id
-    res.render('page-chaussure', {shoesId: shoesId, shoesMarque: "Jordan"})
-}
+    let shoesId = req.params.id
+    let brandName = req.path
+    brandName = brandName.slice(1, 7)
+    let firstLetter = brandName.charAt(0).toUpperCase()
+    brandName = firstLetter + brandName.slice(1)
 
-exports.getPageNike = function(req, res) {
-    shoe = new Shoes({shoesId: req.params.id, shoesMarque: "Nike"});
-    shoeName = shoe.getShoesName();
-    res.render('page-chaussure', {shoesName: shoeName, shoesMarque: shoe.data.shoesMarque})
+    currentShoes = new Shoes({_id: shoesId, brand: brandName});
+
+    res.render('page-chaussure', {shoesId: currentShoes.data.id, shoesMarque: currentShoes.data.brand})
 }

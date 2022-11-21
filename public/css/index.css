@@ -88,12 +88,12 @@ header nav ul {
 }
 
 .flash-err {
-    margin:auto;
+    /* margin:auto; */
     background-color: rgb(160, 65, 65);
     border: red solid 2px;
     text-align: center;
     padding: 1em;
-    width: 30%;
+    /* width: 30%; */
     margin-top: 1em;
 }
 

@@ -5,7 +5,9 @@
         <link rel="stylesheet" href="./css/login.css">
     </head>
     <main>
-        <%- include('includes/flash') %>
+        <% errors.forEach((message) => { %>
+            <div class="flash-err"><%= message %></div>
+          <% }) %>
         <h2>Login</h2>
         <form method="post" action="/login">
             <ul>
