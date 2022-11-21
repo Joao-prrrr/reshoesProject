@@ -5,11 +5,14 @@
         <link rel="stylesheet" href="./css/register.css">
     </head>
     <main>
+        <% regErrors.forEach((message) => { %>
+            <div class="flash-err"><%= message %></div>
+          <% }) %>
         <h2>Enregistrer</h2>
         <form method="post" action="/register">
             <ul>
                 <li>
-                    <label for="userame">Username ou email</label>
+                    <label for="userame">Username</label>
                     <input type="text" name="username" id="username">
                 </li>
 
