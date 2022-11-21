@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- 
+    Auteurs  : Bastien Schneider, Louis Saulnier, Joao Arariba
+    Projet  : Reshoes project
+    Date    : 05.09.2022
+ -->
 <html lang="fr">
 
 <head>
@@ -26,19 +31,19 @@
                 <p><strong>Hello, <%= user.username %></strong></p>
                 <a href="/logout">Log out</a>
             </nav>
-        <% } else {%>
-        <nav>
-            <a id="login" href="/page-login">Login</a>
-            <a id="register" href="/page-register">Enregistrer</a>
-        </nav>
-        <% } %>
-        <nav>
-            <ul>
-                <li><a href="/page-jordan">Jordan</a></li>
-                <li><a href="/page-yeezy">Yeezy</a></li>
-                <li><a href="/page-newBalance">New Balance</a></li>
-                <li><a href="/page-Nike">Nike</a></li>
-                <li><a href="/page-luxe">Luxe</a></li>
-            </ul>
-        </nav>
+            <% } else {%>
+                <nav>
+                    <a id="login" href="/page-login">Login</a>
+                    <a id="register" href="/page-register">Enregistrer</a>
+                </nav>
+                <% } %>
+                    <nav>
+                        <ul>
+                            <li><a href="/page-jordan">Jordan</a></li>
+                            <li><a href="/page-yeezy">Yeezy</a></li>
+                            <li><a href="/page-newBalance">New Balance</a></li>
+                            <li><a href="/page-Nike">Nike</a></li>
+                            <li><a href="/page-luxe">Luxe</a></li>
+                        </ul>
+                    </nav>
     </header>
