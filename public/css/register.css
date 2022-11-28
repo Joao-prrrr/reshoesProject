@@ -1,18 +1,32 @@
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+header {
+    background-color: white;
 }
 
 li {
     list-style: none;
     display: flex;
     flex-direction: column;
-    margin: 2em;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 50%;
+}
+
+ul {
+    align-items: flex-start;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 label {
     margin-bottom: .5em;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 main {
@@ -22,19 +36,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 button {
-    font-size: 1.5rem;
+    margin: auto;
     padding: 1em 2em 1em 2em;
     background-color: #fff;
     border: none;
-    border-radius: 10px;
-}
-
-li:last-child {
-    flex-basis: 100%;
 }
 
 nav * {
@@ -47,23 +56,76 @@ h1 {
 }
 
 form {
-    background-color: rgb(95, 100, 107);
-    border-radius: 20px;
-    width: 40%;
+    background-color: rgb(255, 255, 255);
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 30px;
+    width: 25%;
 }
 
-input {
-    padding: .5em;
-}
-
-#register {
+#login {
     display: none;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 1.5em;
+    border: black solid 1px;
+    width: 95%;
+    background-color: rgb(253, 253, 253);
+}
+
+button {
+    font-size: 1.25rem;
+    padding: 1em 2em 1em 2em;
+    background-color: rgb(0, 0, 0);
+    color: white;
     border: black solid 2px;
+    border-radius: 5px;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+header nav:last-child {
+    width: 100%;
+}
+
+button:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #555555;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover:after {
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    top: 2px;
+    border-radius: 5px;
+}
+
+body {
+    z-index: 0;
 }

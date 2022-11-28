@@ -6,40 +6,40 @@
     </head>
     <main>
         <% regErrors.forEach((message) => { %>
-            <div class="flash-err"><%= message %></div>
-          <% }) %>
-        <h2>Enregistrer</h2>
-        <form method="post" action="/register">
-            <ul>
-                <li>
-                    <label for="userame">Username</label>
-                    <input type="text" name="username" id="username">
-                </li>
+            <div class="flash-err">
+                <%= message %>
+            </div>
+            <% }) %>
+                <h2>Enregistrer</h2>
+                <form method="post" action="/register">
+                    <ul>
+                        <li>
+                            <label for="userame">Username</label>
+                            <input type="text" name="username" id="username">
+                        </li>
 
-                <li>
-                    <label for="fname">Prénom</label>
-                    <input type="text" name="fname" id="fname">
-                </li>
+                        <li>
+                            <label for="fname">Prénom</label>
+                            <input type="text" name="fname" id="fname">
+                        </li>
 
-                <li>
-                    <label for="lname">Nom</label>
-                    <input type="text" name="lname" id="lname">
-                </li>
+                        <li>
+                            <label for="lname">Nom</label>
+                            <input type="text" name="lname" id="lname">
+                        </li>
 
-                <li>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </li>
+                        <li>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </li>
 
-                <li>
-                    <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password">
-                </li>
-                <li>
-                    <button type="submit">Register</button>
-                </li>
-            </ul>
-        </form>
+                        <li>
+                            <label for="password">Mot de passe</label>
+                            <input type="password" name="password" id="password">
+                        </li>
+                    </ul>
+                    <button type="submit"><span>Register</span></button>
+                </form>
     </main>
     <!-- Footer -->
     <%-include('includes/footer.ejs')%>
