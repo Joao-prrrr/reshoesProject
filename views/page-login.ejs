@@ -6,26 +6,29 @@
     </head>
     <main>
         <% errors.forEach((message) => { %>
-            <div class="flash-err"><%= message %></div>
-          <% }) %>
-        <h2>Login</h2>
-        <form method="post" action="/login">
-            <ul>
-                <li>
-                    <label for="userame">Username ou email</label>
-                    <input type="text" name="username" id="username">
-                </li>
+            <div class="flash-err">
+                <%= message %>
+            </div>
+            <% }) %>
+                <h2>Login</h2>
+                <form method="post" action="/login">
+                    <ul>
+                        <li>
+                            <label for="userame">Username ou email</label>
+                            <input type="text" name="username" id="username">
+                        </li>
 
-                <li>
-                    <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password">
-                </li>
-                <li>
-                    <button type="submit">Login</button>
-                </li>
-            </ul>
-        </form>
+                        <li>
+                            <label for="password">Mot de passe</label>
+                            <input type="password" name="password" id="password">
+                        </li>
+                        <li>
+                            <button type="submit">Login</button>
+                        </li>
+                    </ul>
+                </form>
     </main>
+
     <!-- Footer -->
     <%-include('includes/footer.ejs')%>
         </body>
