@@ -2,11 +2,14 @@ const shoesDB = require('../db').db()
 // .collection('users')
 
 let Shoes = function(data) {
-    this.data = data
     // this.name = shoesName
     // this.price = price
-    // this.data = date
-    this.GetShoesInDatabase(this.data)
+    this.data = data
+    
+    // GetShoesInDatabase(data).then((newdata) => {
+    //     this.data = newdata
+    //     console.log(newdata)
+    // }).catch()
 }
 
 // Shoes.prototype.getShoesName = async () => {
@@ -27,14 +30,15 @@ let Shoes = function(data) {
 Shoes.prototype.GetShoesInDatabase = data => {
     return new Promise(async (resolve, reject) => {
         let shoesTable = shoesDB.collection(data.brand)
-
-        shoesTable.findOne({_id : data._id}).then((shoes) => {
-            
-            console.log(data)
-            resolve()
+        
+        let query = {_id: parseInt(data._id)}
+        await shoesTable.findOne(query).then((result) => {
+            resolve(result)
         }).catch((err) => {
             reject(err)
         })
+
+        
     })
 }
 

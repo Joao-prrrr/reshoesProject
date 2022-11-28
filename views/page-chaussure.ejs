@@ -5,15 +5,15 @@
     <main>
         <ul>
             <li>
-                <img src="../../img/Jordan/Jordan_6_Retro_Infrared.png" alt="Jordan 6 Infrared">
+                <img src="../../img/<%= currentShoes.brand %>/<%= currentShoes.name%>.png" alt="Jordan 6 Infrared">
             </li>
             <li>
                 <ul>
                     <li>
-                        <h2>Nike Air Jordan</h2>
+                        <h2><%= currentShoes.brand %></h2>
                     </li>
                     <li>
-                        <h3>Jordan 6 Retro</h3>
+                        <h3><%=currentShoes.name%></h3>
                     </li>
                     <li>
                         <p>Infrared</p>
@@ -31,7 +31,7 @@
                         </select>
                     </li>
                     <li id="lia">
-                        <a href="../../img/Jordan/Jordan_6_Retro_Infrared.png" download="Jordan 6 Infrared Buy" id="button">Acheter pour <span id="price">315</span> CHF</a>
+                        <a href="../../img/Jordan/Jordan_6_Retro_Infrared.png" download="Jordan 6 Infrared Buy" id="button">Acheter pour <span id="price"><%=currentShoes.price%></span> CHF</a>
                     </li>
                 </ul>
             </li>

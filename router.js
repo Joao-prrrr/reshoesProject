@@ -24,7 +24,8 @@ router.get('/page-login', userController.goToPage)
 router.get('/page-register', userController.goToPage)
 
 // router shoes
-router.get('/jordan/:id', shoesController.getPageJordan)
+router.get('/jordan/:id', shoesController.getPage)
+router.get('/yeezy/:id', shoesController.getPage)
 // router.get('/nike/:id', shoesController.getPageNike)
 // router.get('/yeezy/:id', shoesController.getPageYeezy)
 // router.get('/newBalance/:id', shoesController.getPageNewBalance)
