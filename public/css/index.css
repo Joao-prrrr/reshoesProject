@@ -18,7 +18,7 @@ header {
     justify-content: space-around;
 }
 
-h1{
+h1 {
     flex-basis: 40%;
 }
 
@@ -33,7 +33,8 @@ header nav:first-child {
     align-items: center;
 }
 
-header nav>a, p {
+header nav>a,
+header p {
     margin: 1em;
 }
 
@@ -64,7 +65,8 @@ header nav ul li {
     padding-bottom: 3%;
 }
 
-header nav a, p {
+header nav a,
+header p {
     font-size: 1.5rem;
     transition: all 0.75s;
 }
