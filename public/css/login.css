@@ -2,7 +2,15 @@ li {
     list-style: none;
     display: flex;
     flex-direction: column;
-    margin: 2em;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
 label {
@@ -16,20 +24,18 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     font-size: 2em;
 }
 
 button {
     margin: auto;
     padding: 1em 2em 1em 2em;
-
     background-color: #fff;
     border: none;
 }
 
 nav * {
-  display: none;  
+    display: none;
 }
 
 h1 {
@@ -39,14 +45,16 @@ h1 {
 
 form {
     background-color: rgb(95, 100, 107);
-    border-radius: 20px;
+    border-radius: 15px;
+    padding: 30px;
 }
 
 #login {
     display: none;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
     border-radius: 10px;
     padding: 1.5em;
     border: black solid 2px;
@@ -55,7 +63,6 @@ input[type="text"], input[type="password"] {
 button {
     font-size: 1.5rem;
     padding: 1em 2em 1em 2em;
-
     background-color: #fff;
     border: none;
     border-radius: 10px;
