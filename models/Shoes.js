@@ -42,4 +42,12 @@ Shoes.prototype.GetShoesInDatabase = data => {
     })
 }
 
+Shoes.prototype.GetShoesFamily = (brand) => {
+    return new Promise(async (resolve, reject ) => {
+        let shoesTable = shoesDB.collection(brand)
+    
+        resolve(await shoesTable.find({}))
+    })
+}
+
 module.exports = Shoes

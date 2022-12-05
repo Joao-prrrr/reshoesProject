@@ -3,7 +3,7 @@
     <main>
         <ul>
             <li>
-                <img src="../../img/<%= currentShoes.brand %>/<%= currentShoes.name%>.png" alt="Jordan 6 Infrared">
+                <img src="../../img/<%= currentShoes.brand %>/<%= currentShoes.link%>.png" alt="Jordan 6 Infrared">
             </li>
             <li>
                 <ul>
@@ -14,7 +14,7 @@
                         <h3><%=currentShoes.name%></h3>
                     </li>
                     <li>
-                        <p><%=//currentShoes.details%></p>
+                        <p><%=currentShoes.details%></p>
                     </li>
                     <li>
                         <select name="taille" id="taille">
@@ -36,7 +36,19 @@
         </ul>
         <hr>
         <ul id="suggest">
-            <li>
+
+            <% shoesList.forEach((shoes) => { %>
+                <li>
+                    <a href="/<%= currentShoes.brand %>/<%= shoes._id %>">
+                        <img src="../img/<%= currentShoes.brand %>/<%= shoes.link %>.png" alt="<%= shoes.link %>">
+                        <h3><%= shoes.name %></h3>
+                        <p><%= shoes.details %></p>
+                        <h4><%= shoes.price %> CHF</h4>
+                    </a>
+                </li>
+            <% }) %>
+
+            <!-- <!-- <li>
                 <a href="/jordan/2">
                     <img src="../img/Jordan/Jordan_1_Retro_High_Zoom_White_Racer_Blue.png" alt="Jordan 1 Retro High Zoom White Racer Blue">
                     <h3>Jordan 1 Retro</h3>
@@ -91,7 +103,7 @@
                     <p>White Oreo (2021)</p>
                     <h4>430 CHF</h4>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </main>
     <script src="../JS/taille.js"></script>
