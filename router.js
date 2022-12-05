@@ -26,10 +26,10 @@ router.get('/page-register', userController.goToPage)
 // router shoes
 router.get('/jordan/:id', shoesController.getPage)
 router.get('/yeezy/:id', shoesController.getPage)
-// router.get('/nike/:id', shoesController.getPageNike)
-// router.get('/yeezy/:id', shoesController.getPageYeezy)
-// router.get('/newBalance/:id', shoesController.getPageNewBalance)
-// router.get('/luxe/:id', shoesController.getPageLuxe)
+router.get('/nike/:id', shoesController.getPage)
+router.get('/yeezy/:id', shoesController.getPage)
+router.get('/newBalance/:id', shoesController.getPage)
+router.get('/luxe/:id', shoesController.getPage)
 
 // router's posts
 router.post('/register', userController.register)

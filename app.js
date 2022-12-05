@@ -43,7 +43,7 @@ app.use(function(req, res , next) {
     if (req.session.user) {req.visitorId = req.session.user._id} else {req.visitorId = 0}
     // make user sassion data available from within view templates
     res.locals.user = req.session.user
-    res.locals.currentShoes = req.session.currentShoes;
+    // res.locals.currentShoes = req.session.currentShoes;
 
     if(req.path != "/") {
         let file = req.path

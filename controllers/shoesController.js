@@ -16,12 +16,12 @@ exports.getPage = async function(req, res) {
     // req.session.currentShoes = shoes.GetShoesInDatabase(shoes.data)
     await shoes.GetShoesInDatabase(shoes.data).then((result) =>  {
         req.session.currentShoes = result
-        console.log(result)
         req.session.currentShoes.brand = brandC
+        console.log(result)
     })
     // console.log(shoes)
     req.session.save(() => {
-
+        res.locals.currentShoes = req.session.currentShoes;
         res.render('page-chaussure')
     })
 }
