@@ -19,9 +19,23 @@ exports.getPage = async function(req, res) {
         req.session.currentShoes.brand = brandC
         console.log(result)
     })
+    
+    // Get the others shoes of the brand
+    let shoesList = [];
+    await shoes.GetShoesFamily(shoes.data.brand).then(async (results) => {
+        await results.forEach(shoesResult => {
+            shoesList.push(shoesResult)
+        });
+
+        req.session.shoesList = shoesList
+    }).catch((err) => {
+        console.log(err)
+    })
+    
     // console.log(shoes)
     req.session.save(() => {
         res.locals.currentShoes = req.session.currentShoes;
+        res.locals.shoesList = req.session.shoesList;
         res.render('page-chaussure')
     })
 }
