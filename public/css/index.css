@@ -99,6 +99,10 @@ header nav ul {
     margin-top: 1em;
 }
 
+select {
+    height: 35px;
+}
+
 main>ul {
     display: flex;
     flex-direction: column;
