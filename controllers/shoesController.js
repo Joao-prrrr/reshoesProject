@@ -16,7 +16,7 @@ exports.getPage = async function(req, res) {
     // req.session.currentShoes = shoes.GetShoesInDatabase(shoes.data)
     await shoes.GetShoesInDatabase(shoes.data).then((result) =>  {
         req.session.currentShoes = result
-        req.session.currentShoes.brand = brandC
+        req.session.currentShoes.brand = brandName
         console.log(result)
     })
     
