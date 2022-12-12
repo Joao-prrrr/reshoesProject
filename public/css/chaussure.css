@@ -168,7 +168,7 @@ main>ul {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -181,13 +181,13 @@ main>#suggest li {
     border: 2px solid #A9A9A9;
     padding: 1%;
     border-radius: 10px;
-    width: 12%;
+    width: 10%;
     height: 275px;
     transition: all 0.75s;
 }
 
 main>#suggest li:hover {
-    width: 13%;
+    width: 11%;
     height: 300px;
     transition: all 0.75s;
 }
@@ -207,7 +207,7 @@ main>#suggest li a {
 }
 
 main>#suggest li>a>h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 main>#suggest li>a>h4 {
@@ -215,7 +215,7 @@ main>#suggest li>a>h4 {
 }
 
 main>#suggest li>a>p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #646464;
 }
 
