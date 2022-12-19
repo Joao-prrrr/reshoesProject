@@ -50,7 +50,8 @@ app.use(function(req, res, next) {
             // file = file.slice(6)
             // let firstLetter = file.charAt(0).toUpperCase()
             // file = firstLetter + file.slice(1)
-        file = file.slice(file.indexOf('/') + 1, file.indexOf('/', 1));
+        file = file.slice(file.indexOf('-') + 1);
+        file = file.slice(0, 1).toUpperCase() + file.slice(1);
         res.locals.marque = file
     } else {
         res.locals.marque = false
