@@ -89,33 +89,7 @@
             </li>
         </ul>
     </main>
-    <script>
-        const select = document.getElementById('filtre');
-
-        // Shoes list
-        const shoes = document.getElementsByClassName('shoes');
-        let shoesArray = {}
-
-        for (let i = 0; i < shoes.length; i++) {
-            shoe = shoes[i]
-
-            shoePrice = shoe.firstElementChild.lastElementChild
-            shoePrice = shoePrice.nodeName.value
-            shoesArray[shoe] = shoePrice
-        }
-
-        select.addEventListener('change', () => {
-            let choix = select.value
-
-        })
-
-        function filterShoes(select) {
-            if (select.value === 1) {
-
-            } else if (select.value === 2) {
-
-            }
-        }
+    <script src="JS/filtre.js">
     </script>
     <!-- Footer -->
     <%-include('includes/footer.ejs')%>
