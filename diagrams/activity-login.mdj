@@ -3077,6 +3077,19 @@
 							"propertyLabel": {
 								"$ref": "AAAAAAGFKd4LkAYF4sw="
 							}
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGFlaD7EjuR3Z8=",
+							"_parent": {
+								"$ref": "AAAAAAGFKcMq1QLLpTE="
+							},
+							"font": "Arial;13;0",
+							"left": 64,
+							"top": 664,
+							"width": 305,
+							"height": 41,
+							"text": "Self Informations = your username and password\n"
 						}
 					]
 				}
