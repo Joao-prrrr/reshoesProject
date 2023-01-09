@@ -6,6 +6,8 @@ Intaller node.js : https://nodejs.org/en/
 Pour démarer le serveur local
 > npm run watch
 
+Puis dans un client web tapez : localhost:3000
+
 ## Pas besoin de faire ---------------------------
 
 Init the Json package
