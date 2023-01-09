@@ -6,15 +6,16 @@
     </head>
 
     <main>
+        <div>
+            <select id="filtre">
+                <option selected disabled>------- select -------</option>
+                <option value="1">Prix croissant</option>
+                <option value="2">Prix décroissant</option>
+            </select>
+        </div>
         <img src="img/Logo/Logo_New_Balance.png" alt="logo" id="logo">
         <ul>
-            <li>
-                <select name="filtre" id="filtre">
-                    <option value="1">Prix croissant</option>
-                    <option value="2">Prix décroissant</option>
-                </select>
-            </li>
-            <li>
+            <li id="shoes1" class="shoes">
                 <a href="/newBalance/7">
                     <img src="img/NewBalance/NB_2002R_Navy_Silver_Metallic.png" alt="NB 2002R Navy Silver Metallic">
                     <h3>NB 2002R</h3>
@@ -22,7 +23,7 @@
                     <h4>173 CHF</h4>
                 </a>
             </li>
-            <li>
+            <li id="shoes2" class="shoes">
                 <a href="/newBalance/8">
                     <img src="img/NewBalance/NB_2002R_Protection_Pack_Rain_Cloud.png" alt="NB 2002R Protection Pack Rain Cloud">
                     <h3>NB 2002R</h3>
@@ -30,7 +31,7 @@
                     <h4>215 CHF</h4>
                 </a>
             </li>
-            <li>
+            <li id="shoes3" class="shoes">
                 <a href="/newBalance/1">
                     <img src="img/NewBalance/NB_530_White_Nightwatch_Green.png" alt="NB 530 White Nightwatch Green">
                     <h3>NB 530</h3>
@@ -38,7 +39,7 @@
                     <h4>89 CHF</h4>
                 </a>
             </li>
-            <li>
+            <li id="shoes4" class="shoes">
                 <a href="/newBalance/2">
                     <img src="img/NewBalance/NB_530_White_Silver_Navy.png" alt="NB 530 White Silver Navy">
                     <h3>NB 530</h3>
@@ -46,7 +47,7 @@
                     <h4>77 CHF</h4>
                 </a>
             </li>
-            <li>
+            <li id="shoes5" class="shoes">
                 <a href="/newBalance/3">
                     <img src="img/NewBalance/NB_550_White_Grey.png" alt="NB 550 White Grey">
                     <h3>NB 550</h3>
@@ -54,7 +55,7 @@
                     <h4>114 CHF</h4>
                 </a>
             </li>
-            <li>
+            <li id="shoes6" class="shoes">
                 <a href="/newBalance/4">
                     <img src="img/NewBalance/NB_550_White_Red.png" alt="NB 550 White Red">
                     <h3>NB 550</h3>
@@ -62,7 +63,7 @@
                     <h4>109 CHF</h4>
                 </a>
             </li>
-            <li>
+            <li id="shoes7" class="shoes">
                 <a href="/newBalance/9">
                     <img src="img/NewBalance/NB_9060_Sea_Salt.png" alt="NB 9060 Sea Salt">
                     <h3>NB 9060</h3>
@@ -70,7 +71,7 @@
                     <h4>186 CHF</h4>
                 </a>
             </li>
-            <li>
+            <li id="shoes8" class="shoes">
                 <a href="/newBalance/5">
                     <img src="img/NewBalance/NB_990v3_Santis_Moonbeam.png" alt="NB 990v3 Santis Moonbeam">
                     <h3>NB 990v3</h3>
@@ -78,7 +79,7 @@
                     <h4>231 CHF</h4>
                 </a>
             </li>
-            <li>
+            <li id="shoes9" class="shoes">
                 <a href="/newBalance/6">
                     <img src="img/NewBalance/NB_990v3_Teddy_Santis_Sea_Salt.png" alt="NB 990v3 Teddy Santis Sea Salt">
                     <h3>NB 990v3</h3>
@@ -88,6 +89,8 @@
             </li>
         </ul>
     </main>
+    <script src="JS/filtre.js">
+    </script>
     <!-- Footer -->
     <%-include('includes/footer.ejs')%>
         </body>
